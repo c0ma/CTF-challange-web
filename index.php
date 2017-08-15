@@ -16,10 +16,8 @@
 
 <?php
 
-	$r = strtolower(preg_replace('/[^a-zA-Z0-9\']/', '_',$_GET['language']));
-	#$r = strtolower(preg_replace('/\/\\\\/', '',$_GET['language']));
-	
-	$l = strtolower(preg_replace('/\/\\\\/', '',$_GET['animal']));
+ 	$r = strtolower(preg_replace('/[^a-zA-Z0-9\']/', '_',$_GET['language']));
+    	$l = strtolower(preg_replace('/[^a-zA-Z0-9\']/', '.',$_GET['animal']));
 
 	if(in_array($r, $forbidden) || in_array($l, $forbidden) ) {
 	    die('<center><img src="https://i.imgur.com/N8uY8Jb.jpg?1"><p>Hacking attempt, we have informed the cybercat, beware!');
